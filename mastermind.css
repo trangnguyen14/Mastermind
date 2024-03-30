@@ -1,101 +1,67 @@
 .fullBoard {
-    position: relative; /* Set position to relative */
-    border: 5px solid darkslateblue;
+    border: 3px solid darkslateblue; /* Adjust border thickness */
     background-color: darkslateblue;
-    height: 805px;
-    width: 400px;
-    margin: 0 auto;
-    top: 50px;
-    margin-bottom: 20px; /* Add margin at the bottom to create space for the color board */
+    height: 402px; /* Adjust height */
+    width: 200px; /* Adjust width */
+    position: relative; /* Added to make positioning of child elements relative to this */
+    margin: 0 auto; /* Center the full board */
 }
-.gametitle
-{
-   position: absolute;
-    top: -50px; /* Adjust the distance above the full board */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 35px; /* Adjust font size as needed */
-    color: black; /* Set color to black */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  white-space: nowrap;
-  
-}
-.pick-color-text{
+
+/* Game title styling */
+.gametitle {
     position: absolute;
-    top: 845px; /* Adjust the distance from the top */
+    top: -25px; /* Adjust the distance above the full board */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 30px; /* Adjust font size as needed */
+    font-size: 17px; /* Adjust font size */
     color: black; /* Set color to black */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    white-space: nowrap; /* Prevent the title from wrapping onto multiple lines */
 }
-.board{
+
+/* Pick a color text styling */
+.pick-color-text {
+    position: absolute;
+    top: 200px; /* Adjust the distance from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px; /* Adjust font size */
+    color: black; /* Set color to black */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Board and pegs styling */
+.board, .pegs {
     display: grid;
-    width: 292.72px;
-    height: 100%;
-    float: left;
-}
-
-.pegs{
-    display:grid;
-    height: 90%;
-    width: 20%;
-    float: right;
+    height: 45%; /* Adjust height */
+    width: 50%; /* Adjust width */
     margin-top: 0px;
 }
 
-.colorBoard{
+/* Color board styling */
+.colorBoard {
     display: grid;
-    grid-template-columns: repeat(6, 100px);
-    grid-template-rows: repeat(1, 100px);
-    width: 600px;
-    height: 100px;
+    grid-template-columns: repeat(3, 33px); /* Adjust columns */
+    grid-template-rows: repeat(2, 33px); /* Adjust rows */
+    width: 100px; /* Adjust width */
+    height: 50px; /* Adjust height */
     margin: 0 auto;
-    margin-top: 90px;
+    margin-top: 5px; /* Adjust margin */
 }
 
-.currentColor{
-    width: 200px;
-    height: 50px;
-    border: 5px solid black;
+/* Current color styling */
+.currentColor {
+    width: 100px; /* Adjust width */
+    height: 25px; /* Adjust height */
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 5px; /* Adjust margin */
 }
 
-.code{
-    display: grid;
-    grid-template-columns: repeat(4, 50px);
-    grid-template-rows: repeat(1, 50px);
-    width: 200px;
-    height: 50px;
-    border: 5px solid black;
+/* Submit button styling */
+.submit {
+    width: 100px; /* Adjust width */
+    height: 25px; /* Adjust height */
     margin: 0 auto;
-    margin-top: 10px;
-}
-
-.secretColor{
-    background-color: darkslateblue;
-}
-
-.submit{
-    width: 200px;
-    height: 50px;
-    border: 5px solid black;
-    margin: 0 auto;
-    margin-top: 10px;
-    font-size: 48px;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: white;
-    opacity: .7;
-}
-
-.submit:hover{
-    cursor: pointer;
-    opacity: 1;
-}
-
-.other{
-    margin-left: 100px;
+    margin-top: 5px; /* Adjust margin */
+    font-size: 24px; /* Adjust font size */
 }
